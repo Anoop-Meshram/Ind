@@ -2,127 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anoop Meshram | Civil Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of [Your Name]" />
+  <title>[Your Name] — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary-color: #1e88e5;
-      --text-color: #333;
-      --bg-color: #f9f9f9;
+      --primary: #111827;
+      --accent: #3b82f6;
+      --text: #e5e7eb;
+      --font: 'Inter', sans-serif;
     }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
+
+    html, body {
+      height: 100%;
+      font-family: var(--font);
+      background-color: var(--primary);
+      color: var(--text);
+      scroll-behavior: smooth;
     }
+
     header {
-      height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
-      background: linear-gradient(135deg, #1e88e5, #42a5f5);
-      color: white;
       padding: 2rem;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease-in-out;
     }
-    header h1 {
+
+    h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: white;
     }
-    header h2 {
-      font-weight: 300;
-      font-size: 1.5rem;
+
+    h1 span {
+      color: var(--accent);
     }
-    main {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+      opacity: 0.85;
     }
-    section {
-      margin-bottom: 3rem;
+
+    .btn {
+      margin-top: 2rem;
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 9999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    h3 {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
     }
-    p, li {
-      line-height: 1.7;
-      font-size: 1.1rem;
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
-    ul {
-      list-style: square;
-      padding-left: 1.2rem;
-    }
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      background: #eee;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Anoop Meshram</h1>
-    <h2>Civil Engineer | Project Leader | Structural Specialist</h2>
+    <h1>Hello, I'm <span>[Your Name]</span></h1>
+    <p>A passionate developer crafting modern, fast, and user-first web experiences. Let’s build something great.</p>
+    <a href="#contact"><button class="btn">Get in Touch</button></a>
   </header>
 
-  <main>
-    <section>
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:anoop@example.com">anoop@example.com</a></p>
-      <p>Phone: +1 123-456-7890</p>
-      <p>Portfolio Links:</p>
-      <ul>
-        <li><a href="https://shorturl.at/Xr5fp" target="_blank">Short URL</a></li>
-        <li><a href="https://www.canva.com/design/DAGSagYrFso/ZmSPg99QPP" target="_blank">Canva Design</a></li>
-        <li><a href="https://shorturl.at/ATYcQ" target="_blank">PPT Download</a></li>
-        <li><a href="https://drive.google.com/drive/folders/1Hd8AwvpHxq1v" target="_blank">Google Drive Folder</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Profile</h3>
-      <p>
-        I am a highly skilled Civil Engineer with a deep passion for building sustainable, impactful infrastructure.
-        My strengths lie in structural design, project execution, and technical leadership that enhances communities and businesses.
-      </p>
-    </section>
-
-    <section>
-      <h3>Experience</h3>
-      <p><strong>Senior Civil Engineer – ABC Engineering Firm</strong></p>
-      <p>
-        Led the design and construction of residential and commercial structures. Directed teams, coordinated with stakeholders,
-        and managed multi-million dollar projects from concept to completion.
-      </p>
-      <p><strong>Junior Civil Engineer – XYZ Construction Company</strong></p>
-      <p>
-        Supported infrastructure development including roads and bridges. Conducted site assessments, created blueprints,
-        and ensured regulatory compliance.
-      </p>
-    </section>
-  </main>
-
   <footer>
-    &copy; 2025 Anoop Meshram. All rights reserved.
+    © <span id="year"></span> [Your Name]. All rights reserved.
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
