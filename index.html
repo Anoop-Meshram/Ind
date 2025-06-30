@@ -2,67 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anoop Meshram | Civil Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #000;
-      color: #00ff00;
-      font-family: "Courier New", Courier, monospace;
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
+    :root {
+      --primary-color: #1e88e5;
+      --text-color: #333;
+      --bg-color: #f9f9f9;
     }
-    h1, h2, h3 {
-      color: #00ff00;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1e88e5, #42a5f5);
+      color: white;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header h2 {
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+    main {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    p, li {
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+    ul {
+      list-style: square;
+      padding-left: 1.2rem;
     }
     a {
-      color: #00ff00;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-bottom: 2rem;
-    }
-    strong {
-      color: #00ff00;
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #eee;
     }
   </style>
 </head>
 <body>
-  <h1>Anoop Meshram</h1>
-  <h2>Civil Engineer</h2>
 
-  <div class="section">
-    <p><strong>Email:</strong> anoop@example.com</p>
-    <p><strong>Website:</strong> Click below links</p>
-    <p><a href="https://shorturl.at/Xr5fp">https://shorturl.at/Xr5fp</a><br>
-       <a href="https://www.canva.com/design/DAGSagYrFso/ZmSPg99QPP">https://www.canva.com/design/...</a></p>
-    <p><strong>Download PPT:</strong> Click below links</p>
-    <p><a href="https://shorturl.at/ATYcQ">https://shorturl.at/ATYcQ</a><br>
-       <a href="https://drive.google.com/drive/folders/1Hd8AwvpHxq1v">Google Drive Folder</a></p>
-    <p><strong>Phone:</strong> +1 123-456-7890</p>
-  </div>
+  <header>
+    <h1>Anoop Meshram</h1>
+    <h2>Civil Engineer | Project Leader | Structural Specialist</h2>
+  </header>
 
-  <div class="section">
-    <h3>Profile</h3>
-    <p>
-      I am a highly skilled and motivated Civil Engineer with a passion for designing and constructing structures that improve people's lives.
-      With expertise in various aspects of civil engineering, including structural analysis, project management, and sustainability,
-      I have successfully delivered projects of varying scales and complexities.
-    </p>
-  </div>
+  <main>
+    <section>
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:anoop@example.com">anoop@example.com</a></p>
+      <p>Phone: +1 123-456-7890</p>
+      <p>Portfolio Links:</p>
+      <ul>
+        <li><a href="https://shorturl.at/Xr5fp" target="_blank">Short URL</a></li>
+        <li><a href="https://www.canva.com/design/DAGSagYrFso/ZmSPg99QPP" target="_blank">Canva Design</a></li>
+        <li><a href="https://shorturl.at/ATYcQ" target="_blank">PPT Download</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1Hd8AwvpHxq1v" target="_blank">Google Drive Folder</a></li>
+      </ul>
+    </section>
 
-  <div class="section">
-    <h3>Experience</h3>
-    <p><strong>Senior Civil Engineer, ABC Engineering Firm</strong><br>
-      Responsible for overseeing the design and construction of commercial and residential buildings.
-      Led a team of engineers and collaborated with architects, contractors, and clients to ensure project success.
-      Managed project budgets, timelines, and quality control measures.
-    </p>
-    <p><strong>Junior Civil Engineer, XYZ Construction Company</strong><br>
-      Assisted in the design and development of infrastructure projects, including roads, bridges, and water supply systems.
-      Conducted site visits, performed inspections, and ensured compliance with engineering standards.
-    </p>
-  </div>
+    <section>
+      <h3>Profile</h3>
+      <p>
+        I am a highly skilled Civil Engineer with a deep passion for building sustainable, impactful infrastructure.
+        My strengths lie in structural design, project execution, and technical leadership that enhances communities and businesses.
+      </p>
+    </section>
+
+    <section>
+      <h3>Experience</h3>
+      <p><strong>Senior Civil Engineer – ABC Engineering Firm</strong></p>
+      <p>
+        Led the design and construction of residential and commercial structures. Directed teams, coordinated with stakeholders,
+        and managed multi-million dollar projects from concept to completion.
+      </p>
+      <p><strong>Junior Civil Engineer – XYZ Construction Company</strong></p>
+      <p>
+        Supported infrastructure development including roads and bridges. Conducted site assessments, created blueprints,
+        and ensured regulatory compliance.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Anoop Meshram. All rights reserved.
+  </footer>
+
 </body>
 </html>
