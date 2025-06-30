@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional portfolio of [Your Name]" />
-  <title>[Your Name] — Portfolio</title>
+  <meta name="description" content="Portfolio of [Your Name]" />
+  <title>[Your Name] – Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary: #111827;
+      --bg: #0f172a;
+      --text: #e2e8f0;
       --accent: #3b82f6;
-      --text: #e5e7eb;
+      --muted: #94a3b8;
       --font: 'Inter', sans-serif;
     }
 
@@ -22,84 +23,121 @@
       padding: 0;
     }
 
-    html, body {
-      height: 100%;
+    body {
       font-family: var(--font);
-      background-color: var(--primary);
+      background: var(--bg);
       color: var(--text);
       scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 2rem;
-      flex-direction: column;
-      animation: fadeIn 1.5s ease-in-out;
+      animation: fadeIn 2s ease-out;
     }
 
-    h1 {
+    header h1 {
       font-size: 3rem;
       font-weight: 800;
-      line-height: 1.2;
-      color: white;
     }
 
-    h1 span {
+    header h1 span {
       color: var(--accent);
     }
 
-    p {
-      margin-top: 1rem;
+    header p {
       font-size: 1.2rem;
+      color: var(--muted);
+      margin-top: 1rem;
       max-width: 600px;
-      opacity: 0.85;
     }
 
     .btn {
       margin-top: 2rem;
-      background: var(--accent);
-      color: white;
       padding: 0.75rem 1.5rem;
+      background-color: var(--accent);
+      color: white;
       border: none;
       border-radius: 9999px;
-      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(59, 130, 246, 0.3);
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    .projects .project {
+      margin-top: 2rem;
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
+      color: var(--muted);
       font-size: 0.9rem;
-      color: #9ca3af;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 640px) {
-      h1 {
+      header h1 {
         font-size: 2.2rem;
       }
 
-      p {
+      header p {
         font-size: 1rem;
       }
 
-      .btn {
-        font-size: 0.9rem;
+      section {
+        padding: 3rem 1rem;
       }
     }
   </style>
@@ -108,16 +146,63 @@
 
   <header>
     <h1>Hello, I'm <span>[Your Name]</span></h1>
-    <p>A passionate developer crafting modern, fast, and user-first web experiences. Let’s build something great.</p>
-    <a href="#contact"><button class="btn">Get in Touch</button></a>
+    <p>A frontend & backend developer crafting fast, modern, and accessible web experiences.</p>
+    <a href="#about"><button class="btn">Explore My Work</button></a>
   </header>
 
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate developer with experience in modern web technologies like JavaScript, React, Node.js, and more.
+      I focus on building accessible, scalable, and beautiful digital experiences that perform across all devices.
+    </p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>🧠 SmartNotes App</h3>
+      <p>A full-stack note-taking app with markdown support and real-time sync built with React and Firebase.</p>
+    </div>
+
+    <div class="project">
+      <h3>📈 Portfolio Analytics</h3>
+      <p>Interactive personal site metrics dashboard using Chart.js and Netlify Functions for serverless logging.</p>
+    </div>
+
+    <div class="project">
+      <h3>🌍 Climate Visualizer</h3>
+      <p>Data visualization dashboard showing real-time climate stats using D3.js and public APIs.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Feel free to reach out via email at <a href="mailto:your@email.com">your@email.com</a>
+      or connect on <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.
+    </p>
+  </section>
+
   <footer>
-    © <span id="year"></span> [Your Name]. All rights reserved.
+    © <span id="year"></span> [Your Name]. Built with ❤️ & hosted on GitHub Pages.
   </footer>
 
   <script>
+    // Year update
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Animate on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll("section").forEach(sec => observer.observe(sec));
   </script>
 
 </body>
